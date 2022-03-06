@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from "../styles/Home.module.scss";
-export default function PostCard() {
+export default function PostCard({post}) {
   return (
     <div className={styles.blog}>
       <div className={styles.blog_post}>
         <div className={styles.thumbnail}>
-          <img src="/blog1.png" alt="post cards img" />
+          <img src={post.featuredImage.url} alt="post cards img" />
         </div>
         <div className={styles.blog_content}>
           <span>Functional Programming - 12/02/22</span>

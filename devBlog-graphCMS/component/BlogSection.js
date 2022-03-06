@@ -4,13 +4,13 @@ import Pagination from "./Pagination";
 import PostCard from "./PostCard";
 import PostWidget from "./PostWidget";
 
-export default function BlogSection() {
+export default function BlogSection({posts}) {
   return (
     <div className={styles.site_section}>
       <main className={styles.main}>
         <div className={styles.blog_section}>
-          {[...Array(8)].map((post, i) => (
-            <PostCard key={i} />
+          {posts.map((post, i) => (
+            <PostCard key={i} post={post.node}/>
           ))}
           <Pagination />
         </div>

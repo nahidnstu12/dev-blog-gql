@@ -4,8 +4,10 @@ import Header from "../component/Header";
 import HeroContainer from "../component/HeroContainer";
 import BlogSection from "../component/BlogSection";
 import Footer from "../component/Footer";
+import { getPosts } from "../services";
 
-export default function Home() {
+export default function Home({posts}) {
+  console.log(posts);
   return (
     <div>
       <Head>
@@ -15,7 +17,14 @@ export default function Home() {
       </Head>
 
       <HeroContainer />
-      <BlogSection />
+      <BlogSection posts={posts}/>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  return {
+    props: { posts },
+  };
 }
