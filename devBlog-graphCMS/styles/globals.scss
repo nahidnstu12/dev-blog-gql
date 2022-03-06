@@ -1,0 +1,97 @@
+@import "./breakpoint";
+
+$primary-color: #202020;
+$secondary-color: #f4f7fc;
+$gray-color: #a6a6a6;
+$white-color: #ffffff;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Mulish";
+}
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  color: $primary-color;
+  margin: 1rem 0;
+}
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: $primary-color;
+}
+h1 {
+  font-size: 2.5rem;
+  @include media($until: "sm") {
+    font-size: 1.8rem;
+  }
+}
+h2 {
+  font-size: 1.9rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1rem;
+}
+span {
+  color: $gray-color;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  margin: 1rem 0;
+  color: $gray-color;
+  font-size: 1rem;
+  border-bottom: 2px dotted $primary-color;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+hr {
+  margin: 1rem 0;
+}
+.scroll_top {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 99;
+  background-color: #c8d366;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: none;
+  img {
+    width: 50px;
+    height: 50px;
+    transform: rotate(180deg);
+    @include media($until: "sm") {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+.site_section {
+  width: 80%;
+  margin: 0 auto;
+}
