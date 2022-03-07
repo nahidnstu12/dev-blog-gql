@@ -1,9 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import Header from "../component/Header";
 import HeroContainer from "../component/HeroContainer";
 import BlogSection from "../component/BlogSection";
-import Footer from "../component/Footer";
 import { getPosts } from "../services";
 
 export default function Home({posts}) {
