@@ -144,35 +144,66 @@ $white-color: #ffffff;
       margin-top: 1.5rem;
     }
   }
-  
 }
 .pagination {
-    display: inline-flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    .active {
-      border: 1px solid $primary-color;
-      background-color: $secondary-color;
-    }
-    a {
-      color: $primary-color;
-      text-align: left;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      border-bottom: none;
-      img {
-        width: 2rem;
-        height: 2rem;
-        filter: invert(1);
-      }
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  .active {
+    border: 1px solid $primary-color;
+    background-color: $secondary-color;
+  }
+  a {
+    color: $primary-color;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-bottom: none;
+    img {
+      width: 2rem;
+      height: 2rem;
+      filter: invert(1);
     }
   }
+}
 
 // aside
 .aside {
-  background-color: $secondary-color;
-  padding: 0 1.2rem;
+  // background-color: $secondary-color;
+  // padding: 0 1.2rem;
+  .widget_post {
+    background-color: $secondary-color;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+}
+// authorComponent
+.widget_post {
+  .top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    img {
+      width: 4rem;
+      border-radius: 50%;
+    }
+  }
+  .bio {
+    margin: 1rem 0;
+    text-align: justify;
+  }
+  .bottom {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    span {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-left: 0.5rem;
+    }
+  }
 }
 .wrapper {
   display: flex;
@@ -329,5 +360,29 @@ $white-color: #ffffff;
     // letter-spacing: -0.05em;
     word-break: normal;
     display: block;
+  }
+}
+
+// adjacent block
+.adjacent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .block_post {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid #f4f4fc;
+    margin-top: 2rem;
+    border-radius: 14px;
+    &:hover{
+      background-color: $secondary-color;
+    }
+    img {
+      width: 2rem;
+      height: 2rem;
+      filter: invert(1);
+    }
   }
 }

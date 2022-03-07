@@ -16,27 +16,13 @@ export default function BlogSection({posts}) {
             ))}
           </div>
 
-          <Pagination />
+          {/* <Pagination /> */}
         </div>
         <aside>
-          {/* <div className={styles.commented_post}>
-            <header>
-              <h3>Most Commented Posts</h3>
-            </header>
-            {[...Array(3)].map((post, i) => (
-             
-            ))}
-          </div> */}
+          
           <PostWidget  />
 
-          {/* <div className={styles.recent_post}>
-            <header>
-              <h3>Most Recent Posts</h3>
-            </header>
-            {[...Array(4)].map((post, i) => (
-              <PostWidget key={i} />
-            ))}
-          </div> */}
+          
           <Categories />
         </aside>
       </main>

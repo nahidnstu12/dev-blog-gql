@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getCategories } from "../services";
 export default function Categories() {
   return (
-    <div className={styles.categories}>
+    <div className={styles.widget_post}>
       <header>
         <h3>Categories</h3>
       </header>
