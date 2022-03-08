@@ -66,6 +66,7 @@ export const getPostDetails = async (slug) => {
         author {
           name
           bio
+          createdAt
           photo {
             url
           }
@@ -121,10 +122,6 @@ export const getAdjacentPosts = async (createdAt, slug) => {
         where: { slug_not: $slug, AND: { createdAt_gte: $createdAt } }
       ) {
         title
-        featuredImage {
-          url
-        }
-        createdAt
         slug
       }
       previous: posts(
@@ -242,7 +239,7 @@ export const getRecentPosts = async () => {
     query GetPostDetails() {
       posts(
         orderBy: createdAt_ASC
-        last: 3
+        last: 5
       ) {
         title
         featuredImage {

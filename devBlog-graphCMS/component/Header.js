@@ -1,17 +1,20 @@
-import styles from "../styles/Home.module.scss"
+import styles from "../styles/Home.module.scss";
+import Link from "next/link"
+import { CategoryItem } from "./Categories";
 export default function Header() {
   return (
     <div className={styles.site_section}>
       <nav className={styles.nav}>
-        <div className={styles.logo}>Dev Blog</div>
+        <div className={styles.logo}>
+          <Link href="/">
+            <h2>Dev Blog</h2>
+          </Link>
+        </div>
         <div className={styles.menu}>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#blog">Blog</a>
-          <a href="#contact">Contact</a>
+          <CategoryItem />
         </div>
         <div className={styles.mobile_menu}>
-          <img src="/assets/devImg/menu.png" alt="" />
+          <img src="/menu.png" alt="" />
         </div>
       </nav>
     </div>

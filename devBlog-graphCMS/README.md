@@ -1,8 +1,7 @@
 ## DevBlog 
-
-
 This is project displayed by developer blog based project. This is NextJS project.
-###Features
+
+### Features
 ```
 - Home Page (Navbar, Banner, PostLists, aside)
 - Single Posts
