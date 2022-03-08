@@ -37,11 +37,18 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getPostDetails(params.slug);
+  let data;
+  try {
+    data = await getPostDetails(params.slug);
+  } catch (err) {
+    console.log(err);
+  }
+
   return {
     props: {
       post: data,
     },
+    revalidate: 10,
   };
 }
 

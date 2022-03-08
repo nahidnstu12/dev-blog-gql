@@ -21,6 +21,7 @@ $white-color: #ffffff;
   .logo {
     font-size: 2rem;
     font-weight: 700;
+    cursor: pointer;
   }
   .menu {
     a {
@@ -208,6 +209,7 @@ $white-color: #ffffff;
 .wrapper {
   display: flex;
   align-items: center;
+  cursor: pointer;
   .thumb {
     flex: 1 1;
     height: 80px;
