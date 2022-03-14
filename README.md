@@ -2,7 +2,7 @@
 
 
 ```
--blog with GraphCMS
+-blog with GraphCMS [Live Url](https://devblog-graphcms.vercel.app/)
 -
 ```
 
