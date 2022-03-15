@@ -3,6 +3,8 @@ import React from "react";
 import AdjacentPost from "../../component/AdjacentPost";
 import AuthorCard from "../../component/AuthorCard";
 import Categories from "../../component/Categories";
+import CommentCard from "../../component/CommentCard";
+import CommentsForm from "../../component/CommentsForm";
 import PostBody from "../../component/PostBody";
 import PostWidget from "../../component/PostWidget";
 import { getPostDetails, getPosts } from "../../services";
@@ -20,6 +22,11 @@ export default function Post({ post }) {
       <main className={styles.main}>
         <div className={styles.post_details}>
           <PostBody post={post} />
+
+          <div className={styles.commentsSection}>
+            <CommentsForm slug={post.slug} />
+            <CommentCard slug={post.slug} />
+          </div>
         </div>
         <aside className={styles.aside}>
           <AuthorCard author={post.author} />
@@ -37,11 +44,18 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getPostDetails(params.slug);
+  let data;
+  try {
+    data = await getPostDetails(params.slug);
+  } catch (err) {
+    console.log(err);
+  }
+
   return {
     props: {
       post: data,
     },
+    revalidate: 10,
   };
 }
 

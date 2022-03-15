@@ -25,22 +25,20 @@ export default function PostWidget({ categories, slug }) {
         <h3>{slug ? "Related Posts" : "Recent Posts"}</h3>
       </header>
       {relatedPosts.map((post) => (
-        <div className={styles.wrapper} key={post.slug}>
-          <Link href={`/post/${post.slug}`} className="text-md">
-            <>
-              <div className={styles.thumb}>
-                <img src={post.featuredImage.url} alt="post widgets" />
-              </div>
-              <div className={styles.content}>
-                <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
+        <Link href={`/post/${post.slug}`} key={post.slug}>
+          <div className={styles.wrapper}>
+            <div className={styles.thumb}>
+              <img src={post.featuredImage.url} alt="post widgets" />
+            </div>
+            <div className={styles.content}>
+              <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
 
-                <h4>{post.title}</h4>
+              <h4>{post.title}</h4>
 
-                <a href="#">8 Comments</a>
-              </div>
-            </>
-          </Link>
-        </div>
+              <a href="#">8 Comments</a>
+            </div>
+          </div>
+        </Link>
       ))}
     </div>
   );
