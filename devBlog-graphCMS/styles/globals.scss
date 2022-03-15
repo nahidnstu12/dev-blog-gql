@@ -95,3 +95,35 @@ hr {
   width: 80%;
   margin: 0 auto;
 }
+
+select,
+textarea,
+input {
+  border: 1px solid #f3d1bf;
+  border-radius: 6px;
+  padding: 12px;
+  padding-right: 2rem;
+  outline: none;
+  color: $primary-color;
+  font-size: 1rem;
+  width: 100%;
+  &[type="checkbox"] {
+    width: 12px;
+  }
+}
+
+button {
+  padding: 12px;
+  background: #d1d1d1;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+.errorMsg{
+  font-size: 14px;
+  font-weight: 600;
+  color: #c01717;
+}
