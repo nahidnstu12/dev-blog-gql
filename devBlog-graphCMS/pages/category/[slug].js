@@ -8,7 +8,7 @@ export default function Category({ posts }) {
     const router = useRouter();
 
     if (router.isFallback) {
-      return <Loader />;
+      return "Loading...";
     }
   console.log(posts);
   return <BlogSection posts={posts} />;
@@ -20,6 +20,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { posts },
+    revalidate: 10,
   };
 }
 
